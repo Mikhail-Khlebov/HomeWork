@@ -19,24 +19,40 @@
 // Console.WriteLine("max = " + max + " и " + "min = " + min);
 
 //Задача 4: Напишите программу, которая принимает на вход три числа и выдаёт максимальное из этих чисел.
+// Console.Clear();
+// int max = 0;
+// Console.Write("Введите 1 число: ");
+// int a = int.Parse(Console.ReadLine()!);
+// Console.Write("Введите 2 число: ");
+// int b = int.Parse(Console.ReadLine()!);
+// Console.Write("Введите 3 число: ");
+// int c = int.Parse(Console.ReadLine()!);
+// if (a > max)
+// {
+//     max = a;
+// }
+// else if (b > max)
+// {
+//     max = b;
+// }
+// if ( c > max)
+// {
+//     max = c;
+// }
+// Console.WriteLine("max = " + max);
+
+// Задача №6 Напишите программу, которая на вход принимает число и выдает, является ли число четным (делится ли оно на два без остатка).
 Console.Clear();
-int max = 0;
-Console.Write("Введите 1 число: ");
-int a = int.Parse(Console.ReadLine()!);
-Console.Write("Введите 2 число: ");
-int b = int.Parse(Console.ReadLine()!);
-Console.Write("Введите 3 число: ");
-int c = int.Parse(Console.ReadLine()!);
-if (a > max)
+Console.Write("Введите число: ");
+int n = int.Parse(Console.ReadLine()!);
+
+int Div = n % 2;
+
+if (Div == 0)
 {
-    max = a;
+    Console.WriteLine("Да");
 }
-else if (b > max)
+else
 {
-    max = b;
+    Console.WriteLine("Нет");
 }
-if ( c > max)
-{
-    max = c;
-}
-Console.WriteLine("max = " + max);
