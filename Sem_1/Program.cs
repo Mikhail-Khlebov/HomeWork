@@ -42,17 +42,32 @@
 // Console.WriteLine("max = " + max);
 
 // Задача №6 Напишите программу, которая на вход принимает число и выдает, является ли число четным (делится ли оно на два без остатка).
+// Console.Clear();
+// Console.Write("Введите число: ");
+// int n = int.Parse(Console.ReadLine()!);
+
+// int Div = n % 2;
+
+// if (Div == 0)
+// {
+//     Console.WriteLine("Да");
+// }
+// else
+// {
+//     Console.WriteLine("Нет");
+// }
+
+//Задача 8: Напишите программу, которая на вход принимает число (N), а на выходе показывает все чётные числа от 1 до N.
+
 Console.Clear();
-Console.Write("Введите число: ");
+Console.WriteLine("Введите число: ");
 int n = int.Parse(Console.ReadLine()!);
-
-int Div = n % 2;
-
-if (Div == 0)
+int evenNumber = 2;
+if(n > 1)
 {
-    Console.WriteLine("Да");
-}
-else
-{
-    Console.WriteLine("Нет");
+    while(evenNumber <= n)
+    {
+        Console.Write(evenNumber + " ");
+        evenNumber = evenNumber + 2;
+    }
 }
