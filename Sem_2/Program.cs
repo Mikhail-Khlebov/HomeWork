@@ -13,20 +13,11 @@
 // 		Console.WriteLine("Не трехзначное число");
 //     }
 // Задача 13: Напишите программу, которая выводит третью цифру заданного числа или сообщает, что третьей цифры нет.
-// Console.Clear();
-// Console.Write("Введите число: ");
-// int anyNumber = int.Parse(Console.ReadLine()!);
-// string anyNumberText = Convert.ToString(anyNumber);
-// if (anyNumberText.Length > 2)
-// {
-//   Console.WriteLine("третья цифра -> " + anyNumberText[2]);
-// }
-// else {
-//   Console.WriteLine("-> третьей цифры нет");
-// }
 Console.Clear();
-Console.Write("Введите число:");
+Console.Write("Введите минимум 3-х значное число:");
 int Value = int.Parse(Console.ReadLine()!);
+	Console.Write("Число содержит менее 3-х цифр.\nВведите число:");
+    Value = int.Parse(Console.ReadLine()!);
 int Length = Value.ToString().Length;
 if (Length >= 3) 
 {
@@ -39,5 +30,4 @@ if (Length >= 3)
     } 
     else 
     {
-	Console.WriteLine("Число содержит менее 3-х цифр");
 }
