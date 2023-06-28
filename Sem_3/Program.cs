@@ -75,9 +75,40 @@
 // Console.WriteLine($"Расстояние равно {Math.Round(S, 3)}");
 // Задача 23
 // Напишите программу, которая принимает на вход число (N) и выдаёт таблицу кубов чисел от 1 до N.
-Console.Clear();
-Console.Write("Введите число: ");
-int n = int.Parse(Console.ReadLine()!);
-n = Math.Abs(n);
-for (int i = 1; i <= n; i++)
-	Console.Write($"{i * i * i} ");
+// Console.Clear();
+// Console.Write("Введите число: ");
+// int n = int.Parse(Console.ReadLine()!);
+// n = Math.Abs(n);
+// for (int i = 1; i <= n; i++)
+// 	Console.Write($"{i * i * i} ");
+
+// Console.Clear();
+// Console.Write("Введите координату Х: ");
+// double x = Double.Parse(Console.ReadLine()!);
+// Console.Write("Введите координату Y: ");
+// double y = Double.Parse(Console.ReadLine()!);
+// if (x > 0 && y > 0)
+//     Console.WriteLine("I");
+// else if (x < 0 && y > 0)
+//     Console.WriteLine("II");
+// else if (x < 0 && y < 0)
+//     Console.WriteLine("III");
+// else
+//     Console.WriteLine("IV");
+
+// Console.Clear();
+// Console.Write("Введите номер четверти: ");
+// double x = Double.Parse(Console.ReadLine()!);
+// while (x < 1 && x > 4)
+// {
+// 	Console.WriteLine("Вы ошиблись/nВведите номер четверти: ");
+// 	x = Double.Parse(Console.ReadLine()!);
+// }
+// if (x == 1)
+//     Console.WriteLine("x > 0 && y > 0");
+// else if (x == 2)
+//     Console.WriteLine("x < 0 && y > 0");
+// else if (x == 3)
+//     Console.WriteLine("x < 0 && y < 0");
+// else
+//     Console.WriteLine("x > 0 && y < 0");

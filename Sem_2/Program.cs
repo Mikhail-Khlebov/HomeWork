@@ -1,9 +1,9 @@
-﻿// Задача 10: Напишите программу, которая принимает на вход трёхзначное число и на выходе показывает вторую цифру этого числа.
+﻿//Задача 10: Напишите программу, которая принимает на вход трёхзначное число и на выходе показывает вторую цифру этого числа.
 // Console.Clear();
 // Console.Write("Введите трёхзначное число:");
-// 	int Value = int.Parse(Console.ReadLine()!);
-// 	int Length = Value.ToString().Length;
-// 	if (Length == 3) 
+// int Value = int.Parse(Console.ReadLine()!);
+// int Length = Value.ToString().Length;
+// if (Length == 3) 
 //     {
 // 		int result = ( Value/10 ) % 10;
 // 		Console.WriteLine($"Вторая цифра: этого числа {result}");
