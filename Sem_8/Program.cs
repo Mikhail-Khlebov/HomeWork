@@ -93,43 +93,69 @@
 //Задача 57: Составить частотный словарь элементов 
 //двумерного массива. Частотный словарь содержит 
 //информацию о том, сколько раз встречается элемент входных данных.
-
-void InputMatrix(int[,] matrix)
+bool CheckValue(int[] array, int number)
 {
-    for(int i = 0; i < matrix.GetLength(0); i++)
+    foreach (int element in array)
     {
-        for(int j = 0; j < matrix.GetLength(1); j++)
-            matrix[i, j] = new Random().Next(1, 51);
+        if(element == number)
+            return false;
     }
+    return true;
+}
+
+
+int InputMatrix(int[,] matrix, int[] array)
+{
+    int countNumbers = 0;
+    for (int i = 0; i < matrix.GetLength(0); i++)
+    {
+        for (int j = 0; j < matrix.GetLength(1); j++)
+        {
+            matrix[i, j] = new Random().Next(1, 11); // [1; 10]
+            if (CheckValue(array, matrix[i, j]))
+            {
+                array[countNumbers] = matrix[i, j];
+                countNumbers++;
+            }
+        }
+    }
+    return countNumbers;
 }
 
 void PrintMatrix(int[,] matrix)
 {
-    for(int i = 0; i < matrix.GetLength(0); i++)
+    for (int i = 0; i < matrix.GetLength(0); i++)
     {
-        for(int j = 0; j < matrix.GetLength(1); j++)
-            Console.Write($"{matrix[i, j]}\t");
+        for (int j = 0; j < matrix.GetLength(1); j++)
+            Console.Write($"{matrix[i, j]} \t");
         Console.WriteLine();
     }
 }
-void ReverseMatrix(int[,] matrix)
+
+void ReverseMatrix(int[,] matrix, int[] array, int countNumbers)
 {
-    for (int i = 0; i < matrix.GetLength(1); i++)
+    for(int k = 0; k < countNumbers; k++)
     {
-        for(int j = i + 1; j < matrix.GetLength(1); j++)
+        int count = 0;
+        for (int i = 0; i < matrix.GetLength(0); i++)
         {
-            (matrix[i, j], matrix[j, i]) = (matrix[j, i], matrix[i, j]);
+            for (int j = 0; j < matrix.GetLength(1); j++)
+            {
+                if (matrix[i, j] == array[k])
+                    count++;
+            }
         }
+        Console.WriteLine($"Число {array[k]} встретилось ровно {count} раз");
     }
 }
 
 Console.Clear();
 Console.Write("Введите размер массива: ");
 int[] size = Console.ReadLine()!.Split().Select(x => int.Parse(x)).ToArray();
-int[,] matrix = new int[size[0], size[0]];
-int[] helpArray = new int [size[0] * size[1]];
-int countValues = (matrix.);
+int[,] matrix = new int[size[0], size[1]];
+int[] helpArray = new int[size[0] * size[1]];
+int countValues = InputMatrix(matrix, helpArray);
 PrintMatrix(matrix);
-Console.WriteLine("\n\n");
-ReverseMatrix(matrix);
+Console.WriteLine("\n\n\n");
+ReverseMatrix(matrix, helpArray, countValues);
 PrintMatrix(matrix);
